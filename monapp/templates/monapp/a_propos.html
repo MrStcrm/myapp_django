@@ -1,0 +1,8 @@
+{% extends 'monapp/base.html' %}
+{% load static %}
+{% block title %} À propos {% endblock %}
+{% block content %}
+    <h1>À propos</h1>
+    <p>Cette application a été développé grâce à <strong>Django</strong> ci-dessous:</p>
+<img src="{% static 'monapp/images/django.png' %}" width="300">
+{% endblock %}

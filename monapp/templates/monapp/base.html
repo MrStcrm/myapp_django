@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Mon app Django hehe{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'monapp/css/style.css' %}">
+</head>
+<body>
+    <header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'monapp:accueil' %}">Page d'accueil</a></li>
+            <li><a href="{% url 'monapp:a_propos' %}">À propos</a></li>
+            <li><a href="{% url 'monapp:contact' %}">Contactez-nous</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <p>© 2026 - MonProjet Django - Kossi Elie VIAGBO</p>
+</footer>
+</body>
+</html>
